@@ -110,3 +110,9 @@ root@an4kein:~/vulnhub/bravery/compile#
 ```
 
 ![rootshell](https://raw.githubusercontent.com/an4kein/PREPARATORIO_OSCP/master/NFS/IMAGES/compile_rootshell.png)
+
+Agora copie seu rootshell compilado com permissao SUID para NFS montado e com permisao de escrita
+
+cp rootshell /tmp/nfs/
+
+
