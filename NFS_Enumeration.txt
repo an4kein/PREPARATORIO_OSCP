@@ -37,4 +37,3 @@ drwxr-xr-x 22 root       root       4096 Sep 29 03:47 ..
 drwxr-x---  2 nobody     4294967294 4096 Sep  2  2012 nfs
 ...
 root@kali:/tmp# cd /tmp/nfs
-bash: cd: /tmp/nfs: Permission denied
