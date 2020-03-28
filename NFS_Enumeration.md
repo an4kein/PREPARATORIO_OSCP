@@ -17,6 +17,7 @@ Novell Netware is vulnerable to a stack-based buffer overflow, caused by imprope
 
 2. Mount NFS share
 
+```
 root@kali:~# showmount -h
 Usage: showmount [-adehv]
 [--all] [--directories] [--exports]
@@ -37,9 +38,10 @@ drwxr-xr-x 22 root       root       4096 Sep 29 03:47 ..
 drwxr-x---  2 nobody     4294967294 4096 Sep  2  2012 nfs
 ...
 root@kali:/tmp# cd /tmp/nfs
-
+```
 
 ----------------------------------------------s0wr0b1ndef----------------------------------
+```
 nmap -sV --script=nfs-* 172.16.1.109
 nmap -sV --script=nfs-ls 172.16.1.109  //same result as rpcinfo
 nmap -sV --script=nfs-* 172.16.1.109 // all nfs scripts
@@ -62,7 +64,7 @@ https://pentestlab.blog/tag/rpc/
 
 See root squashing
 https://haiderm.com/linux-privilege-escalation-using-weak-nfs-permissions/
-
+```
 --------------------------------------------------GET SHELL--------------------------------------------
 Veja: https://www.securitynewspaper.com/2018/04/25/use-weak-nfs-permissions-escalate-linux-privileges/
 
