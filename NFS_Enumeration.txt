@@ -21,13 +21,13 @@ root@kali:~# showmount -h
 Usage: showmount [-adehv]
 [--all] [--directories] [--exports]
 [--no-headers] [--help] [--version] [host]
-root@kali:~# showmount 192.168.1.72
-Hosts on 192.168.1.72:
-root@kali:~# showmount -e 192.168.1.72
-Export list for 192.168.1.72:
-/home/vulnix *
+root@kali:~# showmount 172.16.1.109
+Hosts on 172.16.1.109:
+root@kali:~# showmount -e 172.16.1.109
+Export list for 172.16.1.109:
+/var/nfsshare *
 root@kali:~# mkdir /tmp/nfs
-root@kali:~# mount -t nfs 192.168.1.72:/home/vulnix /tmp/nfs -nolock
+root@kali:~# mount -t nfs 172.16.1.109:/var/nfsshare /tmp/nfs -nolock
 root@kali:~# cd /tmp
 root@kali:/tmp# ls -al
 total 52
