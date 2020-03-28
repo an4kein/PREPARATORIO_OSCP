@@ -109,3 +109,4 @@ rootshell  rootshell.c
 root@an4kein:~/vulnhub/bravery/compile# 
 ```
 
+![rootshell](https://raw.githubusercontent.com/an4kein/PREPARATORIO_OSCP/master/NFS/IMAGES/compile_rootshell.png)
