@@ -12,6 +12,10 @@ PEASS - Privilege Escalation Awesome Scripts SUITE (with colors) https://book.ha
 
 https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite
 
+LOLBAS - Living Off The Land Binaries and Scripts (and also Libraries)
+
+https://lolbas-project.github.io/#
+
 
 ### PayloadsAllTheThings
 
