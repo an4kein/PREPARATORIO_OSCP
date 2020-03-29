@@ -11,3 +11,10 @@ https://gtfobins.github.io/
 PEASS - Privilege Escalation Awesome Scripts SUITE (with colors) https://book.hacktricks.xyz
 
 https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite
+
+
+### PayloadsAllTheThings
+
+A list of useful payloads and bypass for Web Application Security and Pentest/CTF
+
+https://github.com/swisskyrepo/PayloadsAllTheThings
